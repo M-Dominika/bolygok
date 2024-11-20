@@ -1,0 +1,39 @@
+<h1>Bolygók</h1>
+
+
+<div>
+  <h2>Neve: {{planet[0].nev}}</h2>
+  <p>Hanyadik: {{planet[0].hanyadik}}</p>
+  <p>halmazallapot: {{planet[0].halmazallapot}}</p>
+  <img src="fold.jpg">
+</div>
+
+<br>
+<br>
+
+<div>
+  <h2>Neve: {{planet[1].nev}}</h2>
+  <p>Hanyadik: {{planet[1].hanyadik}}</p>
+  <p>halmazallapot: {{planet[1].halmazallapot}}</p>
+  <img src="mars.jpg">
+</div>
+
+<br>
+<br>
+
+<div>
+  <h2>Neve: {{planet[2].nev}}</h2>
+  <p>Hanyadik: {{planet[2].hanyadik}}</p>
+  <p>halmazallapot: {{planet[2].halmazallapot}}</p>
+  <img src="neptunusz.jpg" width="300px">
+</div>
+
+
+
+<h3>Új bolygó hozzáadása</h3>
+<form (ngSubmit)="addbolygo()">
+  <input [(ngModel)]="newplanet.nev" name="nev" placeholder="Neve" required>
+  <input [(ngModel)]="newplanet.hanyadik" name="hanyadik" placeholder="Hanyadik" required>
+  <input [(ngModel)]="newplanet.halmazallapot" name="halmazallapot" placeholder="halmazallapot" required>
+  <button type="submit">Hozzáadás</button>
+</form>
